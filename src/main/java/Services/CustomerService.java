@@ -1,6 +1,7 @@
 package Services;
 
 import Models.Customer;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,11 +15,11 @@ public class CustomerService {
 
 
     public CustomerService() {
-        Customer customer = new Customer("Onur Özbay",24,"Haziran");
-        Customer customer1 = new Customer("Ufuk Can Kurt",23,"Haziran");
-        Customer customer2 = new Customer("Berkan Ek",23,"Haziran");
-        Customer customer3 = new Customer("Ömercan Yılmaz",24,"Mayıs");
-        Customer customer4 = new Customer("Umut Samsum",24,"Temmuz");
+        Customer customer = new Customer("Murat Tanrıverdi", 24, "Haziran");
+        Customer customer1 = new Customer("Ufuk Can Kurt", 23, "Haziran");
+        Customer customer2 = new Customer("Berkan Ek", 23, "Haziran");
+        Customer customer3 = new Customer("Ömercan Yılmaz", 24, "Mayıs");
+        Customer customer4 = new Customer("Umut Samsum", 24, "Temmuz");
         customerList.add(customer);
         customerList.add(customer1);
         customerList.add(customer2);
@@ -26,49 +27,31 @@ public class CustomerService {
         customerList.add(customer4);
     }
 
-    public void addCustomer(Customer customer){
+    public void addCustomer(Customer customer) {
         customerList.add(customer);
     }
 
-    public void getAllCustomers(){
-        customerList.stream().map(customer -> customer.getId() + " | " +customer.getFullName()).forEach(System.out::println);
+    public void getAllCustomers() {
+        customerList.stream().map(customer -> customer.getId() + " | " + customer.getFullName()).forEach(System.out::println);
     }
 
-    public void getFilteredCustomersByLetter(String letter){
+    public void getFilteredCustomersByLetter(String letter) {
         customerList.stream()
-                .map(customer -> customer.getId() + " | " +customer.getFullName())
+                .map(customer -> customer.getId() + " | " + customer.getFullName())
                 .filter(c -> (c.contains(letter.toLowerCase()) || (c.contains(letter.toUpperCase()))))
                 .forEach(System.out::println);
     }
 
     public static List<Customer> getFilteredCustomersByMonth(String month) {
 
-       return customerList.stream()
+        return customerList.stream()
                 .filter(customer -> customer.getDateOfReg()
-                .equals(month)).collect(Collectors.toList());
-
-
-
-
-
-        // Faturaları buraya gelecek.
-        // Util class - Singleton.
-        // Solid - D
-        // Akın Kaldıroğlu
+                        .equals(month)).collect(Collectors.toList());
     }
 
-    public static String getCustomerNameById(int customerId){
+    public static String getCustomerNameById(int customerId) {
         return customerList.stream().filter(c -> c.getId() == customerId).map(Customer::getFullName).collect(Collectors.joining());
     }
-
-
-
-
-
-
-
-
-
 
 
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Customer{
+public class Customer {
     private static final AtomicInteger i = new AtomicInteger(0);
     private final int id;
     private String fullName;
@@ -17,7 +17,6 @@ public class Customer{
     public List<Order> getOrderList() {
         return orderList;
     }
-
 
 
     public Customer(String fullName, int age, String dateOfReg, List<Order> orderList) {

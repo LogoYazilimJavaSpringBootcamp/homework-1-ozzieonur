@@ -16,8 +16,6 @@ public class Company {
     public List<Order> companyOrderList = new ArrayList<>();
 
 
-
-
     public Company(int id, String name, String sector, String description) {
         this.id = id;
         this.name = name;
