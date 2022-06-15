@@ -154,4 +154,374 @@ TreeMap<Integer, String> musteriler = new TreeMap<>();
 Çıktı: `` 1-Onur | 3-Ümit | 6-Hüseyin | 7-Ufuk | ``
 
 
-``● HashTable<K, V> :`` HashMap ile benzer bir yapıya sahip ancak farklar mevcuttur. HashTable senkronize yapıdadır, dolayısıyla performansı düşüktür. HashMap null değer alırken HashTable alamaz.
+``● HashTable<K, V> :`` HashMap ile benzer bir yapıya sahip ancak farklar mevcuttur. HashTable senkronize yapıdadır, dolayısıyla performansı düşüktür. HashMap null değer alırken HashTable alamaz. <br>
+
+``Maven komutları ve çıktıları:``
+
+``mvn validate : `` Projenin target dosyasını siler ve daha sonra hatalı kısımları tarayarak Projenin doğruluğunu kontrol eder.
+
+Çıktı :
+````
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.example:homework-1-ozzieonur >------------------
+[INFO] Building homework-1-ozzieonur 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.128 s
+[INFO] Finished at: 2022-06-15T22:12:45+03:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
+````
+<br>
+
+``mvn compile : `` Projeyi clean ve validate eder ardından Kaynak kodu derler.
+
+Çıktı :
+
+````
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.example:homework-1-ozzieonur >------------------
+[INFO] Building homework-1-ozzieonur 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ homework-1-ozzieonur ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ONUR\homework-1-ozzieonur\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ homework-1-ozzieonur ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.170 s
+[INFO] Finished at: 2022-06-15T22:15:38+03:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
+````
+<br>
+
+``mvn test : `` Derlenmiş koda uygun bir unit test ile test eder.
+
+Çıktı :
+
+````
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.example:homework-1-ozzieonur >------------------
+[INFO] Building homework-1-ozzieonur 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ homework-1-ozzieonur ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ONUR\homework-1-ozzieonur\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ homework-1-ozzieonur ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ homework-1-ozzieonur ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ONUR\homework-1-ozzieonur\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ homework-1-ozzieonur ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ homework-1-ozzieonur ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.AppTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s - in com.example.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.853 s
+[INFO] Finished at: 2022-06-15T22:16:26+03:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
+````
+
+<br>
+
+``mvn package :`` Projeyi testlerini yapar ve eğer hata yoksa projeyi paketler. jar dosyasını oluşturur.
+
+Çıktı :
+
+````
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.example:homework-1-ozzieonur >------------------
+[INFO] Building homework-1-ozzieonur 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ homework-1-ozzieonur ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ONUR\homework-1-ozzieonur\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ homework-1-ozzieonur ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ homework-1-ozzieonur ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ONUR\homework-1-ozzieonur\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ homework-1-ozzieonur ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ homework-1-ozzieonur ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.AppTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in com.example.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ homework-1-ozzieonur ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.290 s
+[INFO] Finished at: 2022-06-15T22:18:53+03:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
+````
+
+<br>
+
+``mvn verify :`` Entegrasyon teslerinin sonuçlarını kontrol ederek kalite kriterine ulaşıldığından emin olur.
+
+Çıktı :
+
+````
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.example:homework-1-ozzieonur >------------------
+[INFO] Building homework-1-ozzieonur 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ homework-1-ozzieonur ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ONUR\homework-1-ozzieonur\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ homework-1-ozzieonur ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ homework-1-ozzieonur ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ONUR\homework-1-ozzieonur\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ homework-1-ozzieonur ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ homework-1-ozzieonur ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.AppTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s - in com.example.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ homework-1-ozzieonur ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.115 s
+[INFO] Finished at: 2022-06-15T22:20:04+03:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
+````
+
+<br>
+
+``mvn install :`` Diğer projelerde dependency olarak kullanmak için paketleri local depoya yükler.
+
+Çıktı :
+
+````
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.example:homework-1-ozzieonur >------------------
+[INFO] Building homework-1-ozzieonur 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ homework-1-ozzieonur ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ONUR\homework-1-ozzieonur\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ homework-1-ozzieonur ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ homework-1-ozzieonur ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ONUR\homework-1-ozzieonur\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ homework-1-ozzieonur ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ homework-1-ozzieonur ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.AppTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 s - in com.example.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ homework-1-ozzieonur ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ homework-1-ozzieonur ---
+[INFO] Installing C:\Users\ONUR\homework-1-ozzieonur\target\homework-1-ozzieonur-1.0-SNAPSHOT.jar to C:\Users\ONUR\.m2\repository\com\example\homework-1-ozzieonur\1.0-SNAPSHOT\homework-1-ozzieonur-1.0-SNAPSHOT.jar
+[INFO] Installing C:\Users\ONUR\homework-1-ozzieonur\pom.xml to C:\Users\ONUR\.m2\repository\com\example\homework-1-ozzieonur\1.0-SNAPSHOT\homework-1-ozzieonur-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.143 s
+[INFO] Finished at: 2022-06-15T22:20:49+03:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
+````
+
+<br>
+
+``mvn clean  :`` Projenin derlenmesi sırasında oluşan target klasörünün(build işlemi sonucunda üretilen) silinmesini sağlar.
+
+Çıktı :
+
+````
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.example:homework-1-ozzieonur >------------------
+[INFO] Building homework-1-ozzieonur 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ homework-1-ozzieonur ---
+[INFO] Deleting C:\Users\ONUR\homework-1-ozzieonur\target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.530 s
+[INFO] Finished at: 2022-06-15T22:21:23+03:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
+````
+
+<br>
+
+``mvn site  :`` Projenin site dökümantasyonunu oluşturur.
+
+Çıktı :
+
+````
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.example:homework-1-ozzieonur >------------------
+[INFO] Building homework-1-ozzieonur 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-site-plugin:3.7.1:site (default-site) @ homework-1-ozzieonur ---
+[INFO] configuring report plugin org.apache.maven.plugins:maven-project-info-reports-plugin:3.0.0
+[INFO] 15 reports detected for maven-project-info-reports-plugin:3.0.0: ci-management, dependencies, dependency-info, dependency-management, distribution-management, index, issue-management, licenses, mailing-lists, modules, plugin-management, plugins, scm, summary, team
+[INFO] Rendering site with default locale English (en)
+[INFO] Relativizing decoration links with respect to localized project URL: http://www.example.com
+[INFO] Rendering content with org.apache.maven.skins:maven-default-skin:jar:1.2 skin.
+[INFO] Generating "Dependencies" report  --- maven-project-info-reports-plugin:3.0.0:dependencies
+[INFO] Generating "Dependency Information" report --- maven-project-info-reports-plugin:3.0.0:dependency-info
+[INFO] Generating "About" report         --- maven-project-info-reports-plugin:3.0.0:index
+[INFO] Generating "Plugin Management" report --- maven-project-info-reports-plugin:3.0.0:plugin-management
+[INFO] Generating "Plugins" report       --- maven-project-info-reports-plugin:3.0.0:plugins
+[INFO] Generating "Summary" report       --- maven-project-info-reports-plugin:3.0.0:summary
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.569 s
+[INFO] Finished at: 2022-06-15T22:27:16+03:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
+````
+
+<br>
+
+``mvn deploy  :`` Projeyi uygulama sunucusuna yükler.
+
+Projemizi bizden bir sunucu URL'i bekler. Ancak biz şuanda bir sunucu kullanmadığımız için kod çıktısı hata verecektir:
+
+````
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ homework-1-ozzieonur ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\ONUR\homework-1-ozzieonur\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ homework-1-ozzieonur ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\ONUR\homework-1-ozzieonur\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ homework-1-ozzieonur ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.AppTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in com.example.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ homework-1-ozzieonur ---
+[INFO] Building jar: C:\Users\ONUR\homework-1-ozzieonur\target\homework-1-ozzieonur-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ homework-1-ozzieonur ---
+[INFO] Installing C:\Users\ONUR\homework-1-ozzieonur\target\homework-1-ozzieonur-1.0-SNAPSHOT.jar to C:\Users\ONUR\.m2\repository\com\example\homework-1-ozzieonur\1.0-SNAPSHOT\homework-1-ozzieonur-1.0-SNAPSHOT.jar
+[INFO] Installing C:\Users\ONUR\homework-1-ozzieonur\pom.xml to C:\Users\ONUR\.m2\repository\com\example\homework-1-ozzieonur\1.0-SNAPSHOT\homework-1-ozzieonur-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ homework-1-ozzieonur ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.532 s
+[INFO] Finished at: 2022-06-15T22:32:00+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy (default-deploy) on project homework-1-ozzieonur: Deployment failed: repository element was not specified in the POM inside distributionManagement element or in -DaltDeploymentRepository=id::layout::url parameter -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+Process finished with exit code 1
+
+
+````
